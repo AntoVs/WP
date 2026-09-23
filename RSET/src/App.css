@@ -1,6 +1,6 @@
-/* ==========================================
-   Global Layout & Resets
-   ========================================== */
+/* =========================================
+   GLOBAL DARK THEME & LAYOUT RESETS
+   ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +9,8 @@
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: #f5f5f5;
-  color: #111;
+  background-color: #07090d; /* Deep dark cosmic/tech background */
+  color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -24,11 +24,12 @@ main {
   width: 100%;
   min-height: 100vh;
   padding-top: 80px; /* Accounts for fixed navbar */
+  background: transparent;
 }
 
 
 /* ==========================================
-   Hero Section Styles
+   HERO SECTION STYLES (Dark & Transparent)
    ========================================== */
 .hero {
   position: relative;
@@ -36,10 +37,8 @@ main {
   min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
-
   background-image: url("/images/campus.jpg");
   background-size: cover;
   background-position: center;
@@ -47,16 +46,131 @@ main {
   color: white;
 }
 
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  /* Deep transparent dark gradients for particle integration */
+  background: linear-gradient(
+    90deg,
+    rgba(7, 9, 13, 0.92) 0%,
+    rgba(7, 9, 13, 0.75) 45%,
+    rgba(7, 9, 13, 0.40) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.hero-subtitle {
+  margin: 0 0 20px;
+  color: #e5e5e5;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(52px, 8vw, 100px);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: #c02738;
+}
+
+.hero-description {
+  max-width: 600px;
+  margin: 28px 0 35px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-btn.primary {
+  background: #a51f2d;
+  color: white;
+}
+
+.hero-btn.primary:hover {
+  background: #c02738;
+}
+
+.hero-btn.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+.hero-btn.secondary:hover {
+  background: white;
+  color: #111;
+}
+
+.hero-scroll {
+  position: absolute;
+  z-index: 2;
+  right: 5%;
+  bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  writing-mode: vertical-rl;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
 
 /* ==========================================
-   Academic Programs Section Styles
+   ACADEMIC PROGRAMS SECTION STYLES (Dark Theme)
    ========================================== */
 .academic-section {
   width: 100%;
   flex-shrink: 0;
   padding: 110px 0;
-  background: #f7f7f5;
-  color: #171717;
+  background: rgba(12, 11, 13, 0.85); /* Semi-transparent dark background for particles */
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .academic-container {
@@ -70,7 +184,7 @@ main {
 
 .academic-heading p {
   margin: 0 0 8px;
-  color: #a51f2d;
+  color: #d8a94c;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -81,6 +195,7 @@ main {
   font-family: Georgia, serif;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 600;
+  color: #ffffff;
 }
 
 .academic-heading span {
@@ -88,7 +203,7 @@ main {
   width: 55px;
   height: 3px;
   margin-top: 15px;
-  background: #b28a3b;
+  background: #c5a05a;
 }
 
 /* Program Grid & Cards */
@@ -100,26 +215,29 @@ main {
 
 .program-card {
   overflow: hidden;
-  background: #ffffff;
-  border: 1px solid #dedede;
+  background: rgba(17, 20, 27, 0.75); /* Transparent card style */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .program-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+  border-color: rgba(165, 31, 45, 0.4);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
 }
 
 .program-header {
   padding: 35px 30px 28px;
-  background: linear-gradient(135deg, #26070b, #4b0d14);
+  background: linear-gradient(135deg, #1f0508, #36090e);
   color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .program-header p {
   margin: 0 0 12px;
-  color: #b28a3b;
+  color: #d8a94c;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -138,7 +256,7 @@ main {
   width: 58px;
   height: 3px;
   margin-top: 14px;
-  background: #b28a3b;
+  background: #c5a05a;
 }
 
 .program-body {
@@ -150,8 +268,9 @@ main {
   align-items: center;
   gap: 13px;
   min-height: 55px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   font-size: 14px;
+  color: #cfd6df;
 }
 
 .program-icon {
@@ -162,8 +281,8 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #f8eeee;
-  color: #a51f2d;
+  background: rgba(165, 31, 45, 0.15);
+  color: #d8a94c;
   font-size: 18px;
   font-weight: 600;
 }
@@ -178,7 +297,7 @@ main {
   justify-content: space-between;
   margin-top: 18px;
   padding: 15px 8px;
-  color: #171717;
+  color: #ffffff;
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
@@ -187,14 +306,16 @@ main {
 
 .program-link span {
   font-size: 22px;
+  color: #c02738;
 }
 
 .program-link:hover {
-  color: #a51f2d;
+  color: #d8a94c;
 }
 
+
 /* ==========================================
-   Responsive Queries
+   RESPONSIVE QUERIES
    ========================================== */
 @media (max-width: 1000px) {
   .program-grid {
@@ -204,7 +325,24 @@ main {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  .hero {
+    min-height: calc(100vh - 80px);
+  }
+
+  .hero-content {
+    width: 88%;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+    letter-spacing: -2px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
   .academic-section {
     padding: 75px 0;
   }

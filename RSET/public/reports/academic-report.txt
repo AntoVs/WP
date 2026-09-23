@@ -1,0 +1,14 @@
+RSET ACADEMIC PERFORMANCE REPORT
+Academic Year: 2025-26
+
+This is a demonstration report created for the
+RSET Web Programming project.
+
+Sections:
+- Academic activities
+- Department activities
+- Student development
+- Academic initiatives
+
+NOTE:
+This document contains dummy information.

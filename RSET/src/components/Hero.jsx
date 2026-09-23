@@ -30,11 +30,6 @@ function Hero() {
           </a>
         </div>
       </div>
-
-      <div className="hero-scroll">
-        <span>Scroll to explore</span>
-        <div className="scroll-line"></div>
-      </div>
     </section>
   );
 }

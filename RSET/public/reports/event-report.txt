@@ -1,0 +1,13 @@
+RSET EVENTS AND ACTIVITIES REPORT
+Academic Year: 2025-26
+
+Demonstration event report.
+
+Events:
+1. Technical Workshop
+2. Innovation Challenge
+3. Student Development Programme
+4. Annual Technical Event
+
+NOTE:
+This document contains dummy information.
