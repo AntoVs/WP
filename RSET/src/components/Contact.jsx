@@ -90,51 +90,6 @@ function Contact() {
         </div>
       </section>
 
-      {/* Contact Details */}
-      <section className="contact-details">
-        <div className="details-container">
-
-          <div className="detail-item">
-            <span className="detail-number">01</span>
-
-            <h3>Visit Us</h3>
-
-            <p>
-              Rajagiri Valley,
-              <br />
-              Kakkanad, Kochi,
-              <br />
-              Kerala, India
-            </p>
-          </div>
-
-          <div className="detail-item">
-            <span className="detail-number">02</span>
-
-            <h3>Email Us</h3>
-
-            <p>
-              info@rset.edu.in
-              <br />
-              admissions@rset.edu.in
-            </p>
-          </div>
-
-          <div className="detail-item">
-            <span className="detail-number">03</span>
-
-            <h3>Call Us</h3>
-
-            <p>
-              +91 484 266 0999
-              <br />
-              +91 98765 43210
-            </p>
-          </div>
-
-        </div>
-      </section>
-
     </div>
   );
 }

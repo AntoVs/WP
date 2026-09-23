@@ -24,7 +24,11 @@ function App() {
   return (
     <BrowserRouter>
 
-      <Particles />
+      <Particles 
+        speed={0.02}
+        particleCount={150}
+        sizeRandomness={0.5}   
+      />
 
       <Navbar />
 

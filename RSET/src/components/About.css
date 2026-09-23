@@ -73,22 +73,28 @@
 }
 
 /* =========================================
-   INTRO
+   INTRO (Semi-Transparent Glass Card Container)
 ========================================= */
 
 .about-intro {
-  padding: 110px 0;
+  padding: 100px 0;
 }
 
-.about-intro .about-container {
+.about-intro-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 60px;
   align-items: center;
+  background: rgba(14, 16, 22, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 50px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
 }
 
 .about-image {
-  height: 520px;
+  height: 440px;
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -276,4 +282,56 @@
   color: #99aab5;
   font-size: 14px;
   line-height: 1.7;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .about-intro-card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 30px 20px;
+  }
+
+  .about-image {
+    height: 350px;
+  }
+
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    height: 320px;
+  }
+
+  .about-intro,
+  .vision-section,
+  .values-section {
+    padding: 70px 0;
+  }
+
+  .about-intro-card {
+    padding: 24px 16px;
+  }
+
+  .about-image {
+    height: 280px;
+  }
+
+  .vision-card {
+    padding: 35px 25px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
 }

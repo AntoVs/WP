@@ -15,48 +15,50 @@ function About() {
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* Introduction with Semi-Transparent Glass Card */}
       <section className="about-intro">
         <div className="about-container">
+          <div className="about-intro-card">
 
-          <div className="about-image">
-            <img
-              src="/images/campus.jpg"
-              alt="RSET Campus"
-            />
+            <div className="about-image">
+              <img
+                src="/images/campus.jpg"
+                alt="RSET Campus"
+              />
+            </div>
+
+            <div className="about-content">
+              <p className="section-label">WHO WE ARE</p>
+
+              <h2>
+                Engineering Education
+                <br />
+                With a Purpose
+              </h2>
+
+              <div className="gold-line"></div>
+
+              <p>
+                Rajagiri School of Engineering & Technology is presented
+                through this website as an academic institution focused
+                on engineering education, innovation and student
+                development.
+              </p>
+
+              <p>
+                The institution provides an environment where students
+                can develop technical knowledge, explore new ideas and
+                participate in academic and extracurricular activities.
+              </p>
+
+              <p>
+                This website provides a central place to explore the
+                institution, its programmes, activities, events and
+                resources.
+              </p>
+            </div>
+
           </div>
-
-          <div className="about-content">
-            <p className="section-label">WHO WE ARE</p>
-
-            <h2>
-              Engineering Education
-              <br />
-              With a Purpose
-            </h2>
-
-            <div className="gold-line"></div>
-
-            <p>
-              Rajagiri School of Engineering & Technology is presented
-              through this website as an academic institution focused
-              on engineering education, innovation and student
-              development.
-            </p>
-
-            <p>
-              The institution provides an environment where students
-              can develop technical knowledge, explore new ideas and
-              participate in academic and extracurricular activities.
-            </p>
-
-            <p>
-              This website provides a central place to explore the
-              institution, its programmes, activities, events and
-              resources.
-            </p>
-          </div>
-
         </div>
       </section>
 
