@@ -1,0 +1,271 @@
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  z-index: 1000;
+
+  background: #111;
+  color: white;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ================================
+   CONTAINER
+================================ */
+
+.navbar-container {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================================
+   LOGO
+================================ */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-logo img {
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1.15;
+}
+
+.navbar-brand span {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.navbar-brand strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ================================
+   DESKTOP LINKS
+================================ */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-link {
+  position: relative;
+
+  padding: 10px 14px;
+
+  color: #ccc;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.25s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.active {
+  color: white;
+}
+
+/* Active underline */
+
+.nav-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 14px;
+  right: 14px;
+  bottom: 2px;
+
+  height: 2px;
+
+  background: #a51f2d;
+}
+
+/* ================================
+   RSMS BUTTON
+================================ */
+
+.rsms-button {
+  margin-left: 12px;
+
+  padding: 10px 20px;
+
+  border-radius: 5px;
+
+  background: #a51f2d;
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.rsms-button:hover {
+  background: #c12738;
+}
+
+/* ================================
+   MOBILE BUTTON
+================================ */
+
+.menu-button {
+  display: none;
+
+  border: none;
+  background: none;
+
+  color: white;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+/* ================================
+   MOBILE MENU
+================================ */
+
+.mobile-menu {
+  display: none;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .navbar-links {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .mobile-menu {
+    position: absolute;
+
+    top: 80px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    background: #111;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.25s ease;
+  }
+
+  .mobile-menu.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-link {
+    padding: 14px;
+
+    color: #ccc;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+  }
+
+  .mobile-link:hover,
+  .mobile-link.active {
+    background: #a51f2d;
+    color: white;
+  }
+
+  .mobile-rsms {
+    margin-top: 10px;
+
+    padding: 13px;
+
+    text-align: center;
+
+    background: #a51f2d;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+  }
+}
+
+/* ================================
+   SMALL SCREENS
+================================ */
+
+@media (max-width: 550px) {
+
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar-logo img {
+    width: 45px;
+    height: 45px;
+  }
+}
