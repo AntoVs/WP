@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Reports from "./components/Reports";
 import Particles from "./components/Particles";
+import Gallery from "./components/Gallery";
 
 import "./App.css";
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </main>
 
