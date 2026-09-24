@@ -6,6 +6,7 @@ import "./Navbar.css";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
+  { name: "Events", path: "/events" },
   { name: "Gallery", path: "/gallery" },
   { name: "Reports", path: "/reports" },
   { name: "Contact", path: "/contact" },
@@ -50,14 +51,14 @@ function Navbar() {
             </NavLink>
           ))}
 
-          {/* Dummy RSMS link */}
           <a
-            href="#"
+            href="https://www.rajagiritech.ac.in/stud/ktu/Student/Home.asp"
             className="rsms-button"
-            onClick={(e) => e.preventDefault()}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            RSMS
-          </a>
+  RSMS
+</a>
         </nav>
 
         {/* Mobile Menu Button */}

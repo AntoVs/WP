@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "title": "RSET Tech Fest",
+    "date": "2026-10-15",
+    "venue": "Main Auditorium",
+    "description": "Annual technical event featuring competitions, workshops and exhibitions."
+  },
+  {
+    "id": 2,
+    "title": "Cultural Fest",
+    "date": "2026-11-10",
+    "venue": "RSET Campus",
+    "description": "A celebration of student talent, creativity and culture."
+  },
+
+  {
+    "id": 3,
+    "title": "AI Workshop",
+    "date": "2026-12-05",
+    "venue": "Computer Lab",
+    "description": "Introduction to artificial intelligence and machine learning."
+  }
+
+]

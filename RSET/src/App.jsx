@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Reports from "./components/Reports";
 import Particles from "./components/Particles";
 import Gallery from "./components/Gallery";
+import Events from "./components/Events";
 
 import "./App.css";
 
@@ -36,6 +37,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/about" element={<About />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/contact" element={<Contact />} />
